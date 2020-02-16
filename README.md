@@ -8,3 +8,4 @@ Task01：[线性回归；Softmax与分类模型、多层感知机（1天）](htt
 <br/>
 Task02：[文本预处理；语言模型；循环神经网络基础（1天）](https://github.com/makeittrue/dssdxx-learning-note/tree/master/Task02)
 
+最后非常感谢datawhale提供的这次学习机会，以及伯禹平台提供的学习资源。
