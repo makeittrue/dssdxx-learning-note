@@ -18,7 +18,7 @@
 
 回顾多层感知机一节描述的多层感知机。为了方便解释，假设输出层只保留一个输出单元o1（删去o2和o3以及指向它们的箭头），且隐藏层使用相同的激活函数。如果将每个隐藏单元的参数都初始化为相等的值，那么在正向传播时每个隐藏单元将根据相同的输入计算出相同的值，并传递至输出层。在反向传播中，每个隐藏单元的参数梯度值相等。因此，这些参数在使用基于梯度的优化算法迭代后值依然相等。之后的迭代也是如此。在这种情况下，无论隐藏单元有多少，隐藏层本质上只有1个隐藏单元在发挥作用。因此，正如在前面的实验中所做的那样，我们通常将神经网络的模型参数，特别是权重参数，进行随机初始化。
 
-![img](D:\有道云文件\software_hb@163.com\d05053c2e61641838d1a52a853669d36\q5jg76kloy.png)
+![img](https://github.com/makeittrue/dssdxx-learning-note/tree/master/images/Task03/%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E3%80%81%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8/01.png)
 
 **PyTorch的默认随机初始化**
 
@@ -28,7 +28,7 @@
 
 还有一种比较常用的随机初始化方法叫作Xavier随机初始化。 假设某全连接层的输入个数为a，输出个数为b，Xavier随机初始化将使该层中权重参数的每个元素都随机采样于均匀分布
 
-![img](D:\有道云文件\software_hb@163.com\73b40ef72a5b48a0992368244e197c10\692fc289971c49f4941905567d929f69.jpg)
+![img](https://github.com/makeittrue/dssdxx-learning-note/tree/master/images/Task03/%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E3%80%81%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8/02.jpg)
 
 它的设计主要考虑到，模型参数初始化后，每层输出的方差不该受该层输入个数影响，且每层梯度的方差也不该受该层输出个数影响。
 
@@ -69,7 +69,7 @@
 
 另一个相关的问题出现在概念转换中，即标签本身的定义发生变化的情况。这听起来很奇怪，毕竟猫就是猫。的确，猫的定义可能不会改变，但我们能不能对软饮料也这么说呢？事实证明，如果我们周游美国，按地理位置转移数据来源，我们会发现，即使是如图所示的这个简单术语的定义也会发生相当大的概念转变。
 
-![img](D:\有道云文件\software_hb@163.com\373f19cd8ef440dd8b4fe1dea41eb8de\q5jgd81pl3.png)
+![img](https://github.com/makeittrue/dssdxx-learning-note/tree/master/images/Task03/%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E3%80%81%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8/03.png)
 
 美国软饮料名称的概念转变
 
@@ -188,7 +188,7 @@ loss = torch.nn.MSELoss() def get_net(feature_num):    net = nn.Linear(feature_n
 
 下面定义比赛用来评价模型的对数均方根误差。给定预测值y^1,…,y^n和对应的真实标签y1,…,yn，它的定义为
 
-![img](D:\有道云文件\software_hb@163.com\850ff6e34fe74ebc8b6767a03fa9b388\66791b23853845f391f64cbf600f700d.jpg)
+![img](https://github.com/makeittrue/dssdxx-learning-note/tree/master/images/Task03/%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E3%80%81%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8/04.jpg)
 
 对数均方根误差的实现如下。
 
