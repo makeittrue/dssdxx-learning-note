@@ -1,4 +1,4 @@
-**梯度消失、梯度爆炸以及Kaggle房价预测**
+# 梯度消失、梯度爆炸以及Kaggle房价预测
 
 1. 梯度消失和梯度爆炸
 2. 考虑到环境因素的其他问题
@@ -81,7 +81,14 @@
 
 In [3]:
 
-%matplotlib inline import torch import torch.nn as nn import numpy as np import pandas as pd import sys sys.path.append("/home/kesci/input") import d2lzh1981 as d2l print(torch.__version__) torch.set_default_tensor_type(torch.FloatTensor)
+    %matplotlib inline
+    import torch 
+    import torch.nn as nn 
+    import numpy as np 
+    import pandas as pd 
+    import sys sys.path.append("/home/kesci/input") 
+    import d2lzh1981 as d2l 
+    print(torch.__version__) torch.set_default_tensor_type(torch.FloatTensor)
 
 1.3.0
 
@@ -93,33 +100,34 @@ In [3]:
 
 In [6]:
 
-test_data = pd.read_csv("/home/kesci/input/houseprices2807/house-prices-advanced-regression-techniques/test.csv") train_data = pd.read_csv("/home/kesci/input/houseprices2807/house-prices-advanced-regression-techniques/train.csv")
+    test_data = pd.read_csv("/home/kesci/input/houseprices2807/house-prices-advanced-regression-techniques/test.csv") 
+    train_data = pd.read_csv("/home/kesci/input/houseprices2807/house-prices-advanced-regression-techniques/train.csv")
 
 训练数据集包括1460个样本、80个特征和1个标签。
 
 In [7]:
 
-train_data.shape
+    train_data.shape
 
 Out[7]:
 
-(1460, 81)
+    (1460, 81)
 
 测试数据集包括1459个样本和80个特征。我们需要将测试数据集中每个样本的标签预测出来。
 
 In [8]:
 
-test_data.shape
+    test_data.shape
 
 Out[8]:
 
-(1459, 80)
+    (1459, 80)
 
 让我们来查看前4个样本的前4个特征、后2个特征和标签（SalePrice）：
 
 In [9]:
 
-train_data.iloc[0:4, [0, 1, 2, 3, -3, -2, -1]]
+    train_data.iloc[0:4, [0, 1, 2, 3, -3, -2, -1]]
 
 Out[9]:
 
@@ -138,7 +146,7 @@ Out[9]:
 
 In [10]:
 
-all_features = pd.concat((train_data.iloc[:, 1:-1], test_data.iloc[:, 1:]))
+    all_features = pd.concat((train_data.iloc[:, 1:-1], test_data.iloc[:, 1:]))
 
 **预处理数据**
 
