@@ -6,11 +6,11 @@ Word2Vec 词嵌入工具的提出正是为了解决上面这个问题，它将�
 
 1. [Skip-Gram 跳字模型](https://zh.d2l.ai/chapter_natural-language-processing/word2vec.html#跳字模型)：假设背景词由中心词生成，即建模 P(wo∣wc)，其中 wc 为中心词，wo 为任一背景词；
 
-![img](D:\有道云文件\software_hb@163.com\84a09285f9104540a58e3c3e1c5a37e9\q5mjsq84o9.png)
+![img](https://github.com/makeittrue/dssdxx-learning-note/blob/master/images/Task07/word2vec/01.png)
 
 1. [CBOW (continuous bag-of-words) 连续词袋模型](https://zh.d2l.ai/chapter_natural-language-processing/word2vec.html#连续词袋模型)：假设中心词由背景词生成，即建模 P(wc∣Wo)，其中 Wo 为背景词的集合。
 
-![img](D:\有道云文件\software_hb@163.com\641c85e359c64de6b722e6af9aa1ff51\q5mjt4r02n.png)
+![img](https://github.com/makeittrue/dssdxx-learning-note/blob/master/images/Task07/word2vec/02.png)
 
 在这里我们主要介绍 Skip-Gram 模型的实现，CBOW 实现与其类似，读者可之后自己尝试实现。后续的内容将大致从以下四个部分展开：
 
