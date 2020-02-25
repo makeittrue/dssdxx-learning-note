@@ -441,7 +441,7 @@ cosine sim=0.427: computers
 
 **问：**
 
-![img]()
+![img](https://github.com/makeittrue/dssdxx-learning-note/tree/master/images/Task07/word2vec/03.jpeg)
 
 ﻿
 
