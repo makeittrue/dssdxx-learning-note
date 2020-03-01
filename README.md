@@ -19,4 +19,6 @@ Task06: [批量归一化和残差网络；凸优化；梯度下降（1天）](ht
 Task07: [优化算法进阶；word2vec；词嵌入进阶（1天）](https://github.com/makeittrue/dssdxx-learning-note/tree/master/Task07)
 
 Task08: [文本分类；数据增强；模型微调（1天）](https://github.com/makeittrue/dssdxx-learning-note/tree/master/Task08)
+
 最后非常感谢datawhale提供的这次学习机会，以及伯禹平台提供的学习资源。
+
